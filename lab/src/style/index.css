@@ -137,6 +137,9 @@ a{
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: rgb(247,237,232);
+    padding-top: 40px;
+    padding-bottom: 50px;
 }
 .supportedText{
     font-weight: bold;
@@ -279,6 +282,7 @@ a{
     flex-wrap: wrap;
     column-gap: 20px;
     row-gap: 50px;
+    padding-top: 70px;
 }
 .card{
     width: 373px;

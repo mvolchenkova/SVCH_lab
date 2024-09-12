@@ -4,6 +4,7 @@ import Footer from './components/Footer.jsx'
 import Card from './components/Card.jsx'
 import Menu from './components/Menu.jsx'
 import BecomeSponsor from './components/BecomeSponsor.jsx'
+import SupportBy from './components/SupportBy.jsx'
 
 import './style/index.css'
 import './style/adaptive.css'
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <Header/>
+      <SupportBy/>
       <div className="cards">
         <Card/>
       </div>
