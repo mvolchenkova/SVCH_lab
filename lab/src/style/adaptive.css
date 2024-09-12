@@ -32,7 +32,7 @@
     .headerButtons{
         display: none;
     }
-    .menuDiv{
+    #menuDiv{
         display: flex;
     }
 }

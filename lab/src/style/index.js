@@ -1,4 +1,4 @@
-const burger = document.querySelector('.menuDiv');
+const burger = document.getElementById('menuDiv');
 const menu1 = document.querySelector('.burger1000');
 const back = document.querySelector('.back');
 const body = document.querySelector('body');
@@ -31,6 +31,7 @@ if(window.innerWidth < 768) {
 burger.addEventListener('click', function(){
     if(window.innerWidth < 768) {
         if(menu2.style.display === 'none') {
+            console.log(57856)
             menu2.style.display = 'flex';
             back.style.display = 'flex';
             body.style.overflow = 'hidden';

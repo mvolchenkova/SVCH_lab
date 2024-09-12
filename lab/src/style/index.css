@@ -681,7 +681,7 @@ footer{
 .logoDiv{
     width: 25%;
 }
-.menuDiv{
+#menuDiv{
     display: none;
     z-index: 3;
 }
