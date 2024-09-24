@@ -1,0 +1,15 @@
+.card{
+    width: 373px;
+}
+.cardName{
+    font-size: 1.416em;
+    font-weight: bold;
+}
+.card>p{
+    width: 350px;
+}
+.AlternatesFont{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

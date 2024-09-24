@@ -1,0 +1,42 @@
+.footerTopDivs{
+    display: flex;
+    gap: 70px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logoDiv{
+    width: 25%;
+}
+.footerLogoDiv{
+    display: flex;
+    align-items:flex-end;
+    gap:15px;
+}
+.footerLogoDiv>p{
+    margin: 0;
+}
+.HR3{
+    color:black;
+    width:100%;
+}
+.line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.Reserved{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.Reserved>p{
+    margin: 0;
+}
+.AlternatesFont{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

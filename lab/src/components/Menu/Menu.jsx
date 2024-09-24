@@ -1,6 +1,5 @@
 import { Component } from 'react';
-import '../style/index.css'
-import '../style/adaptive.css'
+import './Menu.css'
 import arrDown from '../images/Arrow - Down.png'
 
 class Menu extends Component{

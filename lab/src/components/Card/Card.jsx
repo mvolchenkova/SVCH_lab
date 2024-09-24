@@ -1,9 +1,11 @@
-import img1 from '../images/img1.png'
-import img2 from '../images/img2.png'
-import img3 from '../images/img3.png'
-import img4 from '../images/img4.png'
-import img5 from '../images/img5.png'
-import img6 from '../images/img6.png'
+import img1 from '../../images/img1.png'
+import img2 from '../../images/img2.png'
+import img3 from '../../images/img3.png'
+import img4 from '../../images/img4.png'
+import img5 from '../../images/img5.png'
+import img6 from '../../images/img6.png'
+import './Card.css'
+
 import { Component } from 'react';
 
 class Card extends Component{
@@ -21,9 +23,9 @@ class Card extends Component{
         return(
             cards.map(
             item=>(
-                <div class="card">
+                <div className="card">
                     <img src={item.image} alt=""/>
-                    <p class="cardName">{item.cardName}</p>
+                    <p className="cardName">{item.cardName}</p>
                     <p>{item.cardText}</p>
                 </div>
             )

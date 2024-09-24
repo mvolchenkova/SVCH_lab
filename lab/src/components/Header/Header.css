@@ -1,0 +1,61 @@
+.AlternatesFont{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.logoLinks{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap:120px;
+}
+.headerLinks{
+    font-weight: bold;
+    display: flex;
+    gap:60px;
+}
+.moreLink{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+#menuDiv{
+    display: none;
+    z-index: 3;
+}
+.headerButtons{
+    display:flex;
+    font-size: 0.875em;
+    gap:20px;
+}
+.recentButton{
+    background-color:transparent;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-weight: bold;
+}
+.subscribeButton{
+    background-color:black;
+    color:white;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 20px;
+    font-weight: bold;
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 1000px) {
+    #menuDiv{
+        display: flex;
+    }
+    .headerButtons{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .headerLinks, .Sparkle{
+        display:none;
+    }
+
+}

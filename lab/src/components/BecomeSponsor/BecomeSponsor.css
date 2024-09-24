@@ -1,0 +1,151 @@
+#seventhContainer{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 130px;
+}
+#seventhContainer>div>p{
+    text-align: center;
+}
+.listeners{
+    text-align: center;
+    font-size: 3.688em;
+    font-weight: bold;
+    margin: 0;
+    z-index: 2;
+}
+.platform{
+    text-align: center;
+    font-size: 1.416em;
+    font-weight: 500;
+    padding-bottom: 60px;
+}
+.allSponsorCards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap:20px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+.sponsorCards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 373px;
+    gap:20px;
+}
+.spCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 2px;
+    border-radius: 8px;
+    gap:65px;
+    padding: 55px 40px 20px 40px;
+}
+.sponsorName{
+    font-size: 2.291em;
+    font-weight: bold;
+    margin: 0;
+}
+.spLor{
+    font-size: 0.875em;
+}
+.subDiv{
+    display: flex;
+    flex-direction: row;
+}
+.subDiv{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.subscribeButton2{
+    background-color:black;
+    color:white;
+    border-radius: 8px;
+    border: none;
+    padding: 20px 40px;
+    font-weight: bold;
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.3);
+}
+.price{
+    font-size: 1.416em;
+    font-weight: bold;
+    color:rgb(205,70,49);
+}
+.spDescr{
+    border-radius:8px;
+    border: solid 2px;
+    width: 373px;
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
+.spDescr>ul{
+    padding-left: 60px;
+}
+.mostPop{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:30px;
+}
+.spDescr>p{
+    padding-left: 40px;
+}
+.spFam{
+    background-color:rgb(247,237,232);
+    border-color: rgb(205,70,49);
+}
+.mostPopular{
+    font-size: 0.75em;
+    background-color: rgb(205,70,49);
+    color:white;
+    padding: 5px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.AlternatesFont{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media screen and (max-width: 768px) {
+    .listeners, .Membership{
+        font-size: 2.6em;
+    }
+}
+@media screen and (max-width: 400px) {
+    .listeners{
+        font-size: 2em;
+    }
+    .platform{
+        font-size: 1em;
+    }
+    .sponsorCards{
+        width: 320px;
+    }
+    .spCard{
+        width: 250px;
+        padding: 30px 15px 10px 15px;
+    }
+    .sponsorName{
+        font-size: 1.6em;
+    }
+    .subscribeButton2{
+        padding: 10px 20px;
+    }
+    .spDescr{
+        width: 280px;
+    }
+    .spDescr>ul{
+        padding-left: 40px;
+    }
+    
+}

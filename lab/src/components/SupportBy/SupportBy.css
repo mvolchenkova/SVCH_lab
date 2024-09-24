@@ -1,0 +1,35 @@
+.suppCont{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(247,237,232);
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+.HR{
+    width: 80%;
+    color:black;
+}
+.supportedBy{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    width: 80%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.supportedText{
+    font-weight: bold;
+    font-size: 1.438em;
+}
+.AlternatesFont{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media screen and (max-width: 768px) {
+    .supportedBy>img{
+        width: 150px;
+       }
+}
