@@ -10,10 +10,9 @@ import youtube from '../../images/Youtube2.png'
 import appstore from '../../images/app_store.png'
 import googleplay from '../../images/google_play.svg'
 
-import { Component } from 'react';
+import { useEffect, useState } from 'react'; 
 
-class Footer extends Component{
-    render(){
+export default function Footer(){
         return(
             <footer>
       <div className="footerTopDivs">
@@ -68,5 +67,3 @@ class Footer extends Component{
     </footer>
         )
     }
-}
-export default Footer;

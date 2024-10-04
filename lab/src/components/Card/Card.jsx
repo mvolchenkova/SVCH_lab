@@ -6,10 +6,9 @@ import img5 from '../../images/img5.png'
 import img6 from '../../images/img6.png'
 import './Card.css'
 
-import { Component } from 'react';
+import { useEffect, useState } from 'react'; 
 
-class Card extends Component{
-    render(){
+export default function Card(){
         const cards=[
             {image: img1, cardName: 'Topic by Request', cardText: 'Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod tempor.'},
             {image: img2, cardName: 'Exclusive Content', cardText: 'Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod tempor.'},
@@ -32,5 +31,3 @@ class Card extends Component{
         )
         )
     }
-}
-export default Card;

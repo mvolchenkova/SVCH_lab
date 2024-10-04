@@ -1,9 +1,8 @@
-import { Component } from 'react';
+import { useEffect, useState } from 'react'; 
 import './Menu.css'
 import arrDown from '../images/Arrow - Down.png'
 
-class Menu extends Component{
-    render(){
+export default function Menu(){
         return(
             <>
             <div id="burger768">
@@ -25,5 +24,3 @@ class Menu extends Component{
         </>
         )
     }
-}
-export default Menu;

@@ -1,12 +1,11 @@
-import { Component } from 'react';
+import { useEffect, useState } from 'react'; 
 import './SupportBy.css';
 import spotify from '../../images/spotify.png';
 import googlePodcasts from '../../images/googlePodcasts.png';
 import youtube from '../../images/youtube.png';
 
 
-class SupportBy extends Component{
-    render(){
+export default function SupportBy(){
         return(
             <div className="suppCont">
         <hr className="HR"></hr>
@@ -20,5 +19,3 @@ class SupportBy extends Component{
       </div>
         )
     }
-}
-export default SupportBy;

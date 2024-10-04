@@ -4,15 +4,13 @@ import Footer from './components/Footer/Footer.jsx'
 import Card from './components/Card/Card.jsx'
 import BecomeSponsor from './components/BecomeSponsor/BecomeSponsor.jsx'
 import SupportBy from './components/SupportBy/SupportBy.jsx'
+import ListenersReviews from './components/ListenersReviews/ListenersReviews.jsx'
 
 
 import './style/index.css'
 import './style/adaptive.css'
-import { Component } from 'react'
 
-class App extends Component{
-  render(){
-    const name = "Become our sponsor";
+export default function App(){
   return (
     <>
       <Header/>
@@ -20,14 +18,10 @@ class App extends Component{
       <div className="cards">
         <Card/>
       </div>
-      <BecomeSponsor name={name}/>
+      <BecomeSponsor/>
+      <ListenersReviews/>
       <Footer/>
     </>
     
   );
   }
-}
-  
-
-
-export default App;

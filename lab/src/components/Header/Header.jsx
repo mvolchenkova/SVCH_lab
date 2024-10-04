@@ -3,11 +3,10 @@ import arrDown from '../../images/Arrow - Down.png'
 import menu from '../../images/menu.png'
 import logo from '../../images/logo.png'
 
-import { Component } from 'react';
+import { useEffect, useState } from 'react'; 
 
-class Header extends Component{
-    render(){
-    
+export default function Header(){
+
        return(
         <header className="AlternatesFont">
       <div className="logoLinks">
@@ -36,5 +35,3 @@ class Header extends Component{
     
     ) 
     }
-}
-export default Header;

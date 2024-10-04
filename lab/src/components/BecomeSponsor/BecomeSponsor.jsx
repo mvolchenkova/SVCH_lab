@@ -1,14 +1,12 @@
-import { Component } from 'react';
+import { useEffect, useState } from 'react'; 
 import './BecomeSponsor.css'
 
-class BecomeSponsor extends Component{
-    render(){
-      const {name} = this.props;
+export default function BecomeSponsor(){
 
         return(
             <div className="seventhContainer" id="seventhContainer">
       <div>
-        <p className="listeners">{name}</p>
+        <p className="listeners">Become our sponsor</p>
         <p className="platform">Get exclusive episodes, merch and more</p>
       </div>
       <div className="allSponsorCards">
@@ -94,5 +92,3 @@ class BecomeSponsor extends Component{
     </div>
         )
     }
-}
-export default BecomeSponsor;
