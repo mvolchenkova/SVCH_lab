@@ -5,6 +5,7 @@ import Card from './components/Card/Card.jsx'
 import BecomeSponsor from './components/BecomeSponsor/BecomeSponsor.jsx'
 import SupportBy from './components/SupportBy/SupportBy.jsx'
 import ListenersReviews from './components/ListenersReviews/ListenersReviews.jsx'
+import RecentEpisodes from './components/RecentEpisodes/RecentEpisodes.jsx'
 
 
 import './style/index.css'
@@ -20,6 +21,7 @@ export default function App(){
       </div>
       <BecomeSponsor/>
       <ListenersReviews/>
+      <RecentEpisodes/>
       <Footer/>
     </>
     
