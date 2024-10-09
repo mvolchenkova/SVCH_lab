@@ -43,7 +43,10 @@
     font-weight: bold;
     box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.3);
 }
-
+header{
+    display: flex;
+    justify-content: space-between;
+}
 @media screen and (max-width: 1000px) {
     #menuDiv{
         display: flex;

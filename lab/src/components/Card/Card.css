@@ -1,5 +1,10 @@
 .card{
     width: 373px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 .cardName{
     font-size: 1.416em;
@@ -12,4 +17,32 @@
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+.buttonsDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.button{
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+}
+.cardsDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    padding-top: 100px;
+}
+.addCard{
+    display: flex;
+    gap:20px;
+}
+.modal{
+    background-color: rgb(247,237,232);
+    padding: 70px;
+    border-radius:20px;
 }

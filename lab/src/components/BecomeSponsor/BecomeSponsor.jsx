@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'; 
 import './BecomeSponsor.css'
 
 export default function BecomeSponsor(){

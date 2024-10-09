@@ -1,0 +1,28 @@
+.podcast{
+    font-size: 0.875em; 
+    font-weight: bold;
+}
+.podcastDescr{
+    font-size: 2.291em; 
+    font-weight: bold; 
+    color:rgb(205,70,49); 
+    margin: 0;
+}
+.podcastLor{
+    font-size: 0.875em;
+}
+.tips{
+    font-size: 0.875em; 
+    font-weight: bold;
+}
+.tipsDescr{
+    font-size: 2.291em; 
+    font-weight: bold;
+    margin: 0;
+}
+.tipsLor{
+    font-size: 0.875em;
+}
+.eighthContainer{
+    background-color: rgb(247,237,232);
+}

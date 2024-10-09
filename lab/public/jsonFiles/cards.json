@@ -1,0 +1,41 @@
+
+
+[
+    {
+        "id": "1",
+        "image": "./images/img1.png",
+        "cardName": "Topic by Request", 
+        "cardText": "Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod tempor."
+    },
+    {
+        "id": "2",
+        "image": "./images/img2.png", 
+        "cardName": "Exclusive Content", 
+        "cardText": "Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod tempor."
+    },
+    {
+        "id": "3",
+        "image": "./images/img3.png", 
+        "cardName": "Join the Community", 
+        "cardText": "Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod tempor."
+    },
+    {
+        "id": "4",
+        "image": "./images/img4.png", 
+        "cardName": "Livestreaming Access", 
+        "cardText": "Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod tempor."
+    },
+    {
+        "id": "5",
+        "image": "./images/img5.png", 
+        "cardName": "Exclusive Episodes & Merch", 
+        "cardText": "Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod tempor."
+    },
+    {
+        "id": "6",
+        "image": "./images/img6.png", 
+        "cardName": "And much more!", 
+        "cardText": "Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod tempor."
+    }
+
+]

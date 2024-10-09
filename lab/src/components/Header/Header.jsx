@@ -1,29 +1,27 @@
-import './Header.css'
-import arrDown from '../../images/Arrow - Down.png'
-import menu from '../../images/menu.png'
-import logo from '../../images/logo.png'
+import './Header.css';
+import { Link} from 'react-router-dom'; 
 
-import { useEffect, useState } from 'react'; 
-
-export default function Header(){
-
-       return(
-        <header className="AlternatesFont">
+export default function Header() {
+  return (
+    <>
+      <header className="AlternatesFont">
       <div className="logoLinks">
-        <img src={logo} alt="" class="logo"/>
+        <Link to="/">
+          <img src="./images/logo.png" alt="" className="logo" />
+        </Link>
         <div className="headerLinks">
-          <a href="../index/#slider">Episodes</a>
-          <a href="../about/about.html">About</a>
+          <Link to="/episodes">Episodes</Link> 
+          <Link to="/about">About</Link> 
           <div className="moreLink">
-            <a href="">More</a>
-            <img src={arrDown} alt=""/>
+            <Link to="/news">More</Link> 
+            <img src="./images/Arrow - Down.png" alt="" />
           </div>
         </div>
       </div>
       <div id="menuDiv">
-        <img src={menu} alt=""/>
+        <img src="./images/menu.png" alt="" />
       </div>
-      <div class="headerButtons">
+      <div className="headerButtons">
         <button className="recentButton AlternatesFont">
           RECENT EPISODES 
         </button>
@@ -32,6 +30,6 @@ export default function Header(){
         </button>
       </div>
     </header>
-    
-    ) 
-    }
+    </>
+  );
+}

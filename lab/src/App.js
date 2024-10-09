@@ -1,29 +1,21 @@
+import News from './pages/News/News.jsx';
+import Home from './pages/Home/Home.jsx';
+import CardsPage from './pages/CardsPage/CardsPage.jsx'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Header from './components/Header/Header.jsx'
-import Footer from './components/Footer/Footer.jsx'
-import Card from './components/Card/Card.jsx'
-import BecomeSponsor from './components/BecomeSponsor/BecomeSponsor.jsx'
-import SupportBy from './components/SupportBy/SupportBy.jsx'
-import ListenersReviews from './components/ListenersReviews/ListenersReviews.jsx'
-import RecentEpisodes from './components/RecentEpisodes/RecentEpisodes.jsx'
+import './style/index.css';
+import './style/adaptive.css';
 
-
-import './style/index.css'
-import './style/adaptive.css'
-
-export default function App(){
+export default function App() {
   return (
     <>
-      <Header/>
-      <SupportBy/>
-      <div className="cards">
-        <Card/>
-      </div>
-      <BecomeSponsor/>
-      <ListenersReviews/>
-      <RecentEpisodes/>
-      <Footer/>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/cards" element={<CardsPage />} />
+          </Routes>
+        </BrowserRouter>
     </>
-    
   );
-  }
+}

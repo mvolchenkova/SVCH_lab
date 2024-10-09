@@ -1,16 +1,6 @@
-
 import './Footer.css'
-import logo from '../../images/logo.png'
-import twitter from '../../images/twitter.png'
-import inst from '../../images/instagram.png'
-import tiktok from '../../images/tiktok.png'
-import googlePodcast from '../../images/Google Podcast1.png' 
-import spotify from '../../images/Spotify2.png'
-import youtube from '../../images/Youtube2.png'
-import appstore from '../../images/app_store.png'
-import googleplay from '../../images/google_play.svg'
-
-import { useEffect, useState } from 'react'; 
+import { luseEffect, useState } from 'react'; 
+import {Link} from 'react-router-dom'
 
 export default function Footer(){
         return(
@@ -18,20 +8,20 @@ export default function Footer(){
       <div className="footerTopDivs">
         <div className="logoDiv">
           <div className="footerLogoDiv">
-            <img src={logo} alt=""/>
+            <img src="./images/logo.png" alt=""/>
             <p>©2021.</p>
           </div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <div>
-            <img src={twitter} alt=""/>
-            <img src={inst} alt=""/>
-            <img src={tiktok} alt=""/>
+            <img src="./images/twitter.png" alt=""/>
+            <img src="./images/instagram.png" alt=""/>
+            <img src="./images/tiktok.png" alt=""/>
           </div>
         </div>
         <div>
           <p>About</p>
           <p>Testimonials</p>
-          <p>Features</p>
+          <Link to="/cards">Features</Link>
         </div>
         <div>
           <p>Episodes</p>
@@ -42,16 +32,16 @@ export default function Footer(){
           <div>
             <p>Listen to episodes on your fav platform:</p>
             <div>
-              <img src={googlePodcast} alt=""/>
-              <img src={spotify} alt=""/>
-              <img src={youtube} alt=""/>
+              <img src="./images/Google Podcast1.png" alt=""/>
+              <img src="./images/Spotify2.png" alt=""/>
+              <img src="./images/Youtube2.png" alt=""/>
             </div>
           </div>
           <div>
             <p>App available on:</p>
             <div>
-              <img src={appstore} alt=""/>
-              <img src={googleplay} alt=""/>
+              <img src="./images/app_store.png" alt=""/>
+              <img src="./images/google_play.svg" alt=""/>
             </div>
           </div>
         </div>
