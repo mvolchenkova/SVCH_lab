@@ -1,0 +1,28 @@
+.seventhContainer{
+    background-color:rgb(237,243,247);
+    margin-top: -100px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    padding-top: 130px;
+    padding-bottom: 150px;
+    border-bottom: solid 1px black;
+    position: relative;
+    overflow-x: hidden;
+}
+.phone1{
+    position: absolute;
+    left: 0;
+    width: auto;
+    height: 800px;
+    left: -50px;
+    margin-bottom: -850px;
+}
+.phone2{
+    position: absolute;
+    width: auto;
+    height: 800px;
+    margin-bottom: -366px;
+    right: -300px;
+}

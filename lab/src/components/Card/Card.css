@@ -46,3 +46,25 @@
     padding: 70px;
     border-radius:20px;
 }
+.dropdown-menu {
+    display: flex;
+    flex-direction: column; /* Установка направления столбца */
+}
+
+.dropdown-item {
+    padding: 10px 20px; /* Увеличение отступов для удобства */
+}
+
+.dropdown-item:hover {
+    background-color: #e7f1ff; /* Цвет фона при наведении */
+}
+#dropdown-basic{
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+}
+button{
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+}

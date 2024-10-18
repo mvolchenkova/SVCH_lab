@@ -1,5 +1,7 @@
 import './Header.css';
-import { Link} from 'react-router-dom'; 
+import { Link } from 'react-router-dom'; 
+import Button from '../../materialComponents/Button/Button';
+import Image from 'react-bootstrap/Image';
 
 export default function Header() {
   return (
@@ -7,27 +9,23 @@ export default function Header() {
       <header className="AlternatesFont">
       <div className="logoLinks">
         <Link to="/">
-          <img src="./images/logo.png" alt="" className="logo" />
+          <Image src="./images/logo.png" alt="" className="logo" />
         </Link>
         <div className="headerLinks">
           <Link to="/episodes">Episodes</Link> 
           <Link to="/about">About</Link> 
           <div className="moreLink">
             <Link to="/news">More</Link> 
-            <img src="./images/Arrow - Down.png" alt="" />
+            <Image src="./images/Arrow - Down.png" alt="" />
           </div>
         </div>
       </div>
       <div id="menuDiv">
-        <img src="./images/menu.png" alt="" />
+        <Image src="./images/menu.png" alt="" />
       </div>
       <div className="headerButtons">
-        <button className="recentButton AlternatesFont">
-          RECENT EPISODES 
-        </button>
-        <button className="subscribeButton AlternatesFont">
-          SUBSCRIBE
-        </button>
+      <Button color="#000000" text="RECENT EPISODES"/>
+      <Button color="#000000" text="SUBSCRIBE"/>
       </div>
     </header>
     </>

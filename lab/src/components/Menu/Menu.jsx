@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'; 
 import './Menu.css'
 import arrDown from '../images/Arrow - Down.png'
+import Image from 'react-bootstrap/esm/Image';
+import Button from '../../materialComponents/Button/Button';
 
 export default function Menu(){
         return(
@@ -11,14 +12,10 @@ export default function Menu(){
                     <a href="../about/about.html">About</a>
                     <div className="moreLink">
                         <a href="">More</a>
-                        <img src={arrDown} alt=""/>
+                        <Image src={arrDown} alt=""/>
                     </div>
-                    <button className="recentButton AlternatesFont">
-                        RECENT EPISODES
-                    </button>
-                    <button className="subscribeButton AlternatesFont">
-                        SUBSCRIBE
-                    </button>
+                    <Button color="#ffffff" text="RECENT EPISODES"/>
+                    <Button color="#ffffff" text="SUBSCRIBE"/>
                 </div>
             </div>
         </>

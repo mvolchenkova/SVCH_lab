@@ -1,20 +1,21 @@
 import '../ListenersReviews/ListenersReviews.css'
+import Image from 'react-bootstrap/esm/Image'
 
 
 export default function ListenersReviews(){
     return(
         <div className="fourthContainer">
-            <img src="./images/Sparkle.png" alt="" className="Sparkle"></img>
+            <Image src="./images/Sparkle.png" alt="" className="Sparkle"></Image>
             <p className="listeners">What our listeners say</p>
             <p className="platform">Their experience throughout every platform</p>
             <div className="slider1">
-                <img src="./images/slid1.png" alt=""></img>
-                <img src="./images/slid2.png" alt=""></img>
-                <img src="./images/slid3.png" alt=""></img>
+                <Image src="./images/slid1.png" alt=""></Image>
+                <Image src="./images/slid2.png" alt=""></Image>
+                <Image src="./images/slid3.png" alt=""></Image>
             </div>
             <div className="sliderButtons1">
-                <img src="./images/Arrow - Left Circle.png" alt=""></img>
-                <img src="./images/Arrow - Right Circle.png" alt=""></img>
+                <Image src="./images/Arrow - Left Circle.png" alt=""></Image>
+                <Image src="./images/Arrow - Right Circle.png" alt=""></Image>
             </div>
         </div>
     )

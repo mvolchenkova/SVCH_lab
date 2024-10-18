@@ -1,6 +1,7 @@
 import './Card.css';
 import Popup from 'reactjs-popup';
 import { useEffect, useState } from 'react';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 export default function Card() {
     const [cards, addCards] = useState([]);
@@ -8,6 +9,7 @@ export default function Card() {
     const [cardText, changeCardText] = useState("");
     const [newCardName, setNewCardName] = useState("");
     const [newCardText, setNewCardText] = useState("");
+    
 
     useEffect(() => {
         const loadCards = () => {
@@ -62,18 +64,29 @@ export default function Card() {
         setNewCardText("");
     };
 
+    const handleSelect = (value) => {
+        setImage(value);
+        console.log("Selected image:", value);
+    };
+
     const[images, setImage]=useState("")
     return (
         <>
             <div className="addCard">
-                <select name="images" className="selectMenu" id="" onChange={(e)=>setImage(e.target.value)}>
-                    <option value="./images/img1.png">image 1</option>
-                    <option value="./images/img2.png">image 2</option>
-                    <option value="./images/img3.png">image 3</option>
-                    <option value="./images/img4.png">image 4</option>
-                    <option value="./images/img5.png">image 5</option>
-                    <option value="./images/img6.png">image 6</option>
-                </select>
+                <Dropdown>
+                    <Dropdown.Toggle variant="success" id="dropdown-basic">
+                        IMAGE
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img1.png')}>Image 1</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img2.png')}>Image 2</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img3.png')}>Image 3</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img4.png')}>Image 4</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img5.png')}>Image 5</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img6.png')}>Image 6</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+                
                 <input
                     type="text"
                     value={newCardName}

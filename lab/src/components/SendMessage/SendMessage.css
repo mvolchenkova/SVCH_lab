@@ -1,0 +1,64 @@
+.sixthContainer{
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 150px;
+}
+.getInTouch{
+    font-size: 3.706em;
+}
+.sendMes{
+    font-size: 1.416em;
+}
+.formWithImg{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    width: 100%;
+    justify-content: space-around;
+}
+.inputGroups{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    gap:30px;
+    margin-bottom: 35px;
+}
+.inputGroup{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    flex-wrap: wrap;
+}
+.inputGroup>div{
+    gap:0;
+}
+.requiredMes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.red{
+    color:red;
+    margin: 0;
+    font-weight: bold;
+}.sendMessageLine{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+.req{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 25%;
+}
