@@ -27,7 +27,10 @@ export default function Footer(){
         <div>
           <p>Episodes</p>
           <p>Pricing</p>
-          <p>Blog</p>
+          <Link to="/blog">
+            <p>Blog</p>
+          </Link>
+          
         </div>
         <div>
           <div>
