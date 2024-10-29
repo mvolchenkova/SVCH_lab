@@ -2,6 +2,7 @@ import './Header.css';
 import { Link } from 'react-router-dom'; 
 import Button from '../../materialComponents/Button/Button';
 import Image from 'react-bootstrap/Image';
+import ButtonGroup from '../../materialComponents/ButtonGroup/ButtonGroup'
 
 export default function Header() {
   return (
@@ -24,8 +25,7 @@ export default function Header() {
         <Image src="./images/menu.png" alt="" />
       </div>
       <div className="headerButtons">
-      <Button color="#000000" text="RECENT EPISODES"/>
-      <Button color="#000000" text="SUBSCRIBE"/>
+        <ButtonGroup text1="RECENT EPISODES" text2="SUBSCRIBE"/>
       </div>
     </header>
     </>

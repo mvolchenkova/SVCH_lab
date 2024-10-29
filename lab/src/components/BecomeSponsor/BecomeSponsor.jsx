@@ -1,6 +1,6 @@
 import './BecomeSponsor.css'
 import Button from '../../materialComponents/Button/Button';
-
+import Checkbox from '../../materialComponents/Checkbox/Checkbox';
 export default function BecomeSponsor(){
 
         return(
@@ -88,6 +88,10 @@ export default function BecomeSponsor(){
                     </ul>
                   </div>
                 </div>
+              </div>
+              <div className="divWithCheckbox">
+                <Checkbox />
+                <p>I've read policy and User Agreement</p>
               </div>
             </div>
         )

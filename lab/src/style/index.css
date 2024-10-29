@@ -331,21 +331,8 @@ a{
     gap: 20px;
     padding-bottom: 100px;
 }
-.card1{
-    display: flex;
-    flex-direction: column;
-    width: 570px;
-    background-color:white;
-    border-radius:12px;
-    padding: 10px;
-    border:solid 2px black;
-    height: 290px;
-    justify-content: space-between;
-}
-.subDiv{
-    display: flex;
-    flex-direction: row;
-}
+
+
 .hosted{
     display: flex;
     flex-direction: row;
@@ -363,12 +350,7 @@ a{
     width: 46px;
     height: 26px;
 }
-.card1TextDiv{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
+
 .cov{
     width: 166px;
     height: 166px;

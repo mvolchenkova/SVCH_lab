@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "title": "Pandemic Becoming Endemic",
+        "image": "./images/cov1.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "hostedBy": "./images/host.png",
+        "episode": "Eps. 6",
+        "tags": ["covid-19", "health"]
+    },
+    {
+        "id": 2,
+        "title": "The Future of Health",
+        "image": "./images/cov2.png",
+        "description": "Vestibulum ante ipsum primis in faucibus.",
+        "hostedBy": "./images/host.png",
+        "episode": "Eps. 7",
+        "tags": ["health", "wellness"]
+    },
+    {
+        "id": 3,
+        "title": "Pandemic Becoming Endemic",
+        "image": "./images/cov3.png",
+        "description": "Vestibulum ante ipsum primis in faucibus.",
+        "hostedBy": "./images/host.png",
+        "episode": "Eps. 1",
+        "tags": ["covid-19", "wellness"]
+    },
+    {
+        "id": 4,
+        "title": "The Future of Health",
+        "image": "./images/cov4.png",
+        "description": "Vestibulum ante ipsum primis in faucibus.",
+        "hostedBy": "./images/host.png",
+        "episode": "Eps. 2",
+        "tags": ["health", "wellness"]
+    },
+    {
+        "id": 5,
+        "title": "The Future of Health",
+        "image": "./images/cov5.png",
+        "description": "Vestibulum ante ipsum primis in faucibus.",
+        "hostedBy": "./images/host.png",
+        "episode": "Eps. 3",
+        "tags": ["health", "covid-19"]
+    },
+    {
+        "id": 6,
+        "title": "Pandemic Becoming Endemic",
+        "image": "./images/cov6.png",
+        "description": "Vestibulum ante ipsum primis in faucibus.",
+        "hostedBy": "./images/host.png",
+        "episode": "Eps. 4",
+        "tags": ["health", "wellness"]
+    },
+    {
+        "id": 7,
+        "title": "The Future of Health",
+        "image": "./images/cov1.png",
+        "description": "Vestibulum ante ipsum primis in faucibus.",
+        "hostedBy": "./images/host.png",
+        "episode": "Eps. 5",
+        "tags": ["covid-19", "wellness"]
+    }
+]

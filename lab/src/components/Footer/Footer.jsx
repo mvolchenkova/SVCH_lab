@@ -1,5 +1,4 @@
 import './Footer.css'
-import { luseEffect, useState } from 'react'; 
 import {Link} from 'react-router-dom'
 import Image from 'react-bootstrap/esm/Image';
 
@@ -26,7 +25,9 @@ export default function Footer(){
         </div>
         <div>
           <p>Episodes</p>
-          <p>Pricing</p>
+          <Link to="/skeleton">
+            <p>Pricing</p>
+          </Link>
           <Link to="/blog">
             <p>Blog</p>
           </Link>
