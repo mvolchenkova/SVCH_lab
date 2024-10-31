@@ -1,11 +1,13 @@
 import '../EpisodeCards/EpisodeCards.css'
 import '../Episode/Episode.css'
-import Button from '../../materialComponents/Button/Button'
 import { addEpisode } from '../../slices/EpisodesSlice'; 
 import { useDispatch } from 'react-redux';
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
 
 export default function Episode(){
+    const {t} = useTranslation();
 
     const dispatch = useDispatch();
 
@@ -47,7 +49,7 @@ export default function Episode(){
                                 <hr className="HR"/>
 
                                 <div className="hostedBy">
-                                    <p>Hosted by: </p>
+                                    <p>{t("Hosted by:")} </p>
                                     <img src="./images/host.png" alt="" />
                                     <button onClick={()=> handleAddClick(card.id, card.title,card.image, card.description,
                                      card.hostedBy, card.episode)} className="addButton">+</button>

@@ -2,8 +2,12 @@ import './Card.css';
 import Popup from 'reactjs-popup';
 import { useEffect, useState } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
+import { useTranslation } from 'react-i18next';
+
 
 export default function Card() {
+    const {t} = useTranslation();
+
     const [cards, addCards] = useState([]);
     const [cardName, changeCardName] = useState("");
     const [cardText, changeCardText] = useState("");
@@ -75,15 +79,15 @@ export default function Card() {
             <div className="addCard">
                 <Dropdown>
                     <Dropdown.Toggle variant="success" id="dropdown-basic">
-                        IMAGE
+                        {t("IMAGE")}
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img1.png')}>Image 1</Dropdown.Item>
-                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img2.png')}>Image 2</Dropdown.Item>
-                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img3.png')}>Image 3</Dropdown.Item>
-                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img4.png')}>Image 4</Dropdown.Item>
-                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img5.png')}>Image 5</Dropdown.Item>
-                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img6.png')}>Image 6</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img1.png')}>{t("Image")} 1</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img2.png')}>{t("Image")} 2</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img3.png')}>{t("Image")} 3</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img4.png')}>{t("Image")} 4</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img5.png')}>{t("Image")} 5</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={() => handleSelect('./images/img6.png')}>{t("Image")} 6</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
                 
@@ -91,15 +95,15 @@ export default function Card() {
                     type="text"
                     value={newCardName}
                     onChange={(e) => setNewCardName(e.target.value)}
-                    placeholder="Card Name"
+                    placeholder={t("Card Name")}
                 />
                 <input
                     type="text"
                     value={newCardText}
                     onChange={(e) => setNewCardText(e.target.value)}
-                    placeholder="Card Text"
+                    placeholder={t("Card Text")}
                 />
-                <button className="button" onClick={handleAddCard}>ADD CARD</button>
+                <button className="button" onClick={handleAddCard}>{t("ADD CARD")}</button>
             </div>
             <div className="cardsDiv">
             {cards.map(item => (
@@ -108,26 +112,26 @@ export default function Card() {
                     <p className="cardName">{item.cardName}</p>
                     <p>{item.cardText}</p>
                     <div className="buttonsDiv">
-                        <Popup trigger={<button className="button">CHANGE</button>} modal nested>
+                        <Popup trigger={<button className="button">{t("CHANGE")}</button>} modal nested>
                             {close => (
                                 <div className="modal">
                                     <input
                                         type="text"
                                         value={cardName}
                                         onChange={(e) => changeCardName(e.target.value)}
-                                        placeholder="New Card Name"
+                                        placeholder={t("New Card Name")}
                                     />
                                     <input
                                         type="text"
                                         value={cardText}
                                         onChange={(e) => changeCardText(e.target.value)}
-                                        placeholder="New Card Text"
+                                        placeholder={t("New Card Text")}
                                     />
-                                    <button onClick={() => { updateCard(cardName, cardText, item.id); close(); }}>SAVE</button>
+                                    <button onClick={() => { updateCard(cardName, cardText, item.id); close(); }}>{t("SAVE")}</button>
                                 </div>
                             )}
                         </Popup>
-                        <button className="button" onClick={() => handleDeleteCard(item.id)}>DELETE</button>
+                        <button className="button" onClick={() => handleDeleteCard(item.id)}>{t("DELETE")}</button>
                     </div>
                 </div>
             ))}

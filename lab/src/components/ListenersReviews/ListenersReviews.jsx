@@ -1,13 +1,14 @@
 import '../ListenersReviews/ListenersReviews.css'
 import Image from 'react-bootstrap/esm/Image'
-
+import { useTranslation } from 'react-i18next';
 
 export default function ListenersReviews(){
+    const {t} = useTranslation();
     return(
         <div className="fourthContainer">
             <Image src="./images/Sparkle.png" alt="" className="Sparkle"></Image>
-            <p className="listeners">What our listeners say</p>
-            <p className="platform">Their experience throughout every platform</p>
+            <p className="listeners">{t("What our listeners say")}</p>
+            <p className="platform">{t("Their experience throughout every platform")}</p>
             <div className="slider1">
                 <Image src="./images/slid1.png" alt=""></Image>
                 <Image src="./images/slid2.png" alt=""></Image>

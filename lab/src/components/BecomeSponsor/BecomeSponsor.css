@@ -122,6 +122,11 @@
     justify-content: center;
     font-size: 2em;
 }
+.costSpons{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
 @media screen and (max-width: 768px) {
     .listeners, .Membership{
         font-size: 2.6em;

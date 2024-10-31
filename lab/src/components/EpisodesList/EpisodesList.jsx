@@ -32,10 +32,10 @@ export default function EpisodesList() {
     };
     return (
         <div className="episodesList">
-            <p className="epsLIstTitle">Episodes</p>
+            <p className="epsLIstTitle">{t("Episodes")}</p>
             {
                 (!selectedEpisodes || selectedEpisodes.length === 0 ) ? (
-                    <p className="nothing">Nothing added</p>
+                    <p className="nothing">{t("Nothing added")}</p>
                 ) : (
                     <div className="List">
                         {selectedEpisodes.map((card) => (
@@ -51,9 +51,9 @@ export default function EpisodesList() {
                              <hr className="HR"/>
 
                              <div className="hostedBy">
-                                 <p>Hosted by: </p>
+                                 <p>{t("Hosted by:")} </p>
                                  <img src="./images/host.png" alt="" />
-                                 <Popup trigger ={<button className='button-in-card open-redact-menu'>{t('Change properties')}</button>} modal nested>{ 
+                                 <Popup trigger ={<button className='button-in-card open-redact-menu'>{t("Change properties")}</button>} modal nested>{ 
                             close=>( 
                                     <div className='modal-image'> 
                                         <input value="X" type="button" onClick={() => close()}>  
@@ -74,7 +74,7 @@ export default function EpisodesList() {
                             } 
                             </Popup>
 
-                                 <button onClick={()=>HandleDeleteCard(card.id)} className="deleteButton">DELETE</button>
+                                 <button onClick={()=>HandleDeleteCard(card.id)} className="deleteButton">{t("DELETE")}</button>
                              </div>
                              
                              
