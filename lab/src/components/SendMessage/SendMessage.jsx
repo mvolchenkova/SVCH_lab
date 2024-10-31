@@ -1,13 +1,15 @@
 import Textbox from '../../materialComponents/TextField/TextField'
 import Button from '../../materialComponents/Button/Button'
 import '../SendMessage/SendMessage.css'
+import { useTranslation } from 'react-i18next';
 
 export default function SendMessage(){
+    const {t} = useTranslation();
     return(
         <>
             <div className="sixthContainer AlternatesFont">
-                <b className="getInTouch">Get in touch</b>
-                <p className="sendMes">Send your message to us</p>
+                <b className="getInTouch">{t("Get in touch")}</b>
+                <p className="sendMes">{t("Send your message to us")}</p>
                 <div className="formWithImg">
                 <div className="formDiv">
                     <div>
@@ -17,24 +19,24 @@ export default function SendMessage(){
                             <div>
                             <br/>
                             <p className="red">*</p>
-                               <Textbox label="Full name"/>
+                               <Textbox label={t("Full name")}/>
                             </div>
                             <div>
                             <br/>
                             <p className="red">*</p>
-                                <Textbox label="Email"/>
+                                <Textbox label={t("Email")}/>
                             </div>
                         </div>
                         <div className="inputGroup">
                             <div>
                             <br></br>
                             <p className="red">*</p>
-                            <Textbox label="Phone"/>
+                            <Textbox label={t("Phone")}/>
                             </div>
                             <div>
                             <br></br>
                             <p className="red">*</p>
-                            <Textbox label="Subject"/>
+                            <Textbox label={t("Subject")}/>
                             </div>
                         </div>
                         </div>
@@ -42,19 +44,19 @@ export default function SendMessage(){
                         
                         <br/>
                         <p className="red">*</p>
-                        <Textbox label="Message"/>
+                        <Textbox label={t("Message")}/>
                         </div>
                     </form>
                     </div>
                     <div className="sendMessageLine">
                     <div className="req">
                         <p className="red">*</p>
-                        <p>required</p>
+                        <p>{t("required")}</p>
                     </div>
-                    <Button color="#000000" text="SEND MESSAGE"/>
+                    <Button color="#000000" text={t("SEND MESSAGE")}/>
                     <div className="viverra">
-                        <p>Viverra at port accumsan.</p>
-                        <p> Orci non</p>
+                        <p>{t("Viverra at port accumsan.")}</p>
+                        <p>{t(" Orci non")}</p>
                     </div>
                     </div>
                 </div>

@@ -9,6 +9,7 @@ export default function Checkboxes() {
           '&.Mui-checked': {
             color: 'rgb(205,70,49)', 
           },
+          '& .MuiSvgIcon-root': { fontSize: 38 }
         }} 
       />
     </div>

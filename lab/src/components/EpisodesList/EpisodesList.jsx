@@ -1,54 +1,84 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Button from '../../materialComponents/Button/Button'; 
 import './EpisodesList.css'
+import { useDispatch } from 'react-redux';
+import { removeEpisode, updateCard } from '../../slices/EpisodesSlice';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import {Popup} from 'reactjs-popup'
 
 export default function EpisodesList() {
 
+    const {t} = useTranslation();
     const selectedEpisodes = useSelector(state => state.episodes.episodesList);
+    const dispatch = useDispatch();
 
+    const HandleDeleteCard =(id)=>{ 
+        console.log(1)
+        dispatch(removeEpisode({id}));         
+    }
+
+    const [titleinput, settitle] = useState(''); 
+    const [descriptioninput, setdescription] = useState(''); 
+
+    const HandleSetTitleCard =(e) =>{ 
+        settitle(e.target.value); 
+    } 
+    const HandleSetDescriptionCard =(e) =>{ 
+        setdescription(e.target.value); 
+    } 
+    const HandeUpdateCard = (id) => { 
+        dispatch(updateCard({ id, updatedData: { title: titleinput, description:descriptioninput} })); 
+    };
     return (
         <div className="episodesList">
-            <p>Episodes</p>
+            <p className="epsLIstTitle">Episodes</p>
             {
                 (!selectedEpisodes || selectedEpisodes.length === 0 ) ? (
-                    <p>Nothing</p>
+                    <p className="nothing">Nothing added</p>
                 ) : (
                     <div className="List">
-                        {selectedEpisodes.map((card, index) => (
-                             <div key={index} className="subDiv card135 card1">
-                             <div className="card1TextDiv">
-                                 <img src={card.image} alt="" className="cov" />
-                                 <div className="epsButton">
-                                     <div className="buttonDiv">
-                                         <p className="eps">{card.episode}</p>
-                                         <Button
-                                             variant="light"
-                                             className="epsBut"
-                                             color="#ffffff"
-                                             text="+"
-                                         >
-                                             
-                                         </Button>
-                                     </div>
-                                    
-                                     <p className="card1Name">{card.title}</p>
-                                     <hr className="HR1" />
-                                     <p className="cardLorem">{card.description}</p>
-                                 </div>
-                             </div>
-                             <div className="hostedDiv">
+                        {selectedEpisodes.map((card) => (
+                             <div className="card1TextDiv1 card135 card1" key={card.id}>
+                             <div className="imgAndText">
+                                 <img src={card.image} alt="" />
                                  <div>
-                                     {/* {props.card.tags.map((tag, index) => (
-                                         <Button key={index} variant="light">{tag}</Button>
-                                     ))} */}
-                                 </div>
-                                 <div className="hosted">
-                                     <p>Hosted by: </p>
-                                     <img src={card.hostedBy} alt="" className="hostedImg" />
+                                     <p className="eps1">Eps. {card.id}</p>
+                                     <p className="epsTitle">{card.title}</p>
+                                     <p className="epsDescr">{card.description}</p>
                                  </div>
                              </div>
-                         </div>
+                             <hr className="HR"/>
+
+                             <div className="hostedBy">
+                                 <p>Hosted by: </p>
+                                 <img src="./images/host.png" alt="" />
+                                 <Popup trigger ={<button className='button-in-card open-redact-menu'>{t('Change properties')}</button>} modal nested>{ 
+                            close=>( 
+                                    <div className='modal-image'> 
+                                        <input value="X" type="button" onClick={() => close()}>  
+
+                                        </input> 
+                                        
+                                        <div> 
+                                            <p>{t('Lets set a title')}</p> 
+                                            <input type="text" className='modal-input input-title-card' onChange={HandleSetTitleCard}/> 
+                                        </div> 
+                                        <div> 
+                                            <p>{t('Lets set a description')}</p> 
+                                            <input type="text" className='modal-input input-price-card' onChange={HandleSetDescriptionCard}/> 
+                                        </div> 
+                                        <input type="button" value='Save' className='Save-card' onClick={() => HandeUpdateCard(card.id)}/>                          
+                                    </div> 
+                                ) 
+                            } 
+                            </Popup>
+
+                                 <button onClick={()=>HandleDeleteCard(card.id)} className="deleteButton">DELETE</button>
+                             </div>
+                             
+                             
+                         </div> 
                         ))}
                     </div>
                 )

@@ -1,6 +1,5 @@
 import './Header.css';
 import { Link } from 'react-router-dom'; 
-import Button from '../../materialComponents/Button/Button';
 import Image from 'react-bootstrap/Image';
 import ButtonGroup from '../../materialComponents/ButtonGroup/ButtonGroup'
 

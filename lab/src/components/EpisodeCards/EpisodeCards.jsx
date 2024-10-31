@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { addEpisode } from '../../slices/EpisodesSlice'; 
 import Episode from '../Episode/Episode'
 import '../RecentEpisodes/RecentEpisodes.css';
 
 export default function EpisodeCard() {
-    const dispatch = useDispatch();
     
 
     const [cardData, setCardData] = useState([]);
@@ -31,9 +28,9 @@ export default function EpisodeCard() {
 
     return (
             <div className="cardsDiv">
-                {cardData.map((card) => (
-                    <Episode key={card} card={card} />
-                ))}
+                
+                    <Episode />
+              
             </div>        
     );
 }

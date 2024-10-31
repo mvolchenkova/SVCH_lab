@@ -12,6 +12,7 @@ import store from './store/store.js';
 
 import './style/index.css';
 import './style/adaptive.css';
+import './i18n.js'
 
 export default function App() {
   return (

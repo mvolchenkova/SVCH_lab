@@ -1,49 +1,64 @@
-import '../../components/EpisodeCard/EpisodeCard.css'
+import '../EpisodeCards/EpisodeCards.css'
+import '../Episode/Episode.css'
 import Button from '../../materialComponents/Button/Button'
 import { addEpisode } from '../../slices/EpisodesSlice'; 
 import { useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react';
 
-export default function Episode(props){
+export default function Episode(){
 
     const dispatch = useDispatch();
 
-    const handleAddClick = (currentCard) => {
-        dispatch(addEpisode(props.card));
+    const handleAddClick = (id,title,image, description) => {
+        dispatch(addEpisode({id,title,image, description}));
     };
+    const [cardData, setCardData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('/jsonFiles/episodes.json');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                setCardData(data);
+            } catch (error) {
+                console.error('Error fetching the episodes:', error);
+            }
+        };
+
+        fetchData();
+        
+    }, []);
     return(
-        <div  className="subDiv card135 card1">
-                        <div className="card1TextDiv">
-                            <img src={props.card.image} alt="" className="cov" />
-                            <div className="epsButton">
-                                <div className="buttonDiv">
-                                    <p className="eps">{props.card.episode}</p>
-                                    <Button
-                                        variant="light"
-                                        onClick={handleAddClick(props.card)}
-                                        className="epsBut"
-                                        color="#ffffff"
-                                        text="+"
-                                    >
-                                        
-                                    </Button>
+        <div  className="episodes">
+                        
+                        {cardData.map(card =>(
+                            <div className="card1TextDiv1 card135 card1" key={card.id}>
+                                <div className="imgAndText">
+                                    <img src={card.image} alt="" />
+                                    <div>
+                                        <p className="eps1">Eps. {card.id}</p>
+                                        <p className="epsTitle">{card.title}</p>
+                                        <p className="epsDescr">{card.description}</p>
+                                    </div>
                                 </div>
-                               
-                                <p className="card1Name">{props.card.title}</p>
-                                <hr className="HR1" />
-                                <p className="cardLorem">{props.card.description}</p>
-                            </div>
-                        </div>
-                        <div className="hostedDiv">
-                            <div>
-                                {/* {props.card.tags.map((tag, index) => (
-                                    <Button key={index} variant="light">{tag}</Button>
-                                ))} */}
-                            </div>
-                            <div className="hosted">
-                                <p>Hosted by: </p>
-                                <img src={props.card.hostedBy} alt="" className="hostedImg" />
-                            </div>
-                        </div>
-                    </div>
+                                <hr className="HR"/>
+
+                                <div className="hostedBy">
+                                    <p>Hosted by: </p>
+                                    <img src="./images/host.png" alt="" />
+                                    <button onClick={()=> handleAddClick(card.id, card.title,card.image, card.description,
+                                     card.hostedBy, card.episode)} className="addButton">+</button>
+                                </div>
+                                
+                                
+                            </div> 
+                        )
+                        )}
+                        
+                           
+        </div>
     )
 }

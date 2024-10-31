@@ -8,12 +8,25 @@ const episodesSlice = createSlice({
     },
     reducers: {
         addEpisode: (state, action) => {
-            const selected = action.payload;
-            
-            state.episodesList.push(selected);
+
+            state.episodesList.push(action.payload);
+        },
+        removeEpisode: (state, action) => {
+            state.episodesList = state.episodesList.filter((obj) => obj.id !== action.payload.id)
+        },
+        updateCard:(state,action)=>{ 
+            const { id, updatedData } = action.payload; 
+            const CardIndex = state.episodesList.findIndex(card => card.id === id); 
+            if (CardIndex >= 0) { 
+                state.episodesList[CardIndex] = { ...state.episodesList[CardIndex], ...updatedData }; 
+                state.error = null; 
+            } else { 
+                state.error = 'Card no found'; 
+            } 
+       
         },
     },
 });
 
-export const { addEpisode, removeEpisode } = episodesSlice.actions;
+export const { addEpisode, removeEpisode, updateCard } = episodesSlice.actions;
 export default episodesSlice.reducer;
